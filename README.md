@@ -14,7 +14,7 @@ If you go into [src/service/http.service.ts](https://github.com/indroneelray/rea
 If you go into [src/service/pokemon.service.ts](https://github.com/indroneelray/react-pokemon/blob/master/src/service/pokemon.service.ts), you will see how this Axios instance can be extended to isolated http services
 
 ## Router setup
-If you go to [src/router.tsx](https://github.com/indroneelray/react-pokemon/blob/master/src/router.tsx), you can check out a basic AppRouter setup along with `react-router` and `react-router-dom`. Navbar is an example of an HOC and component that uses the [`<Outlet />`](https://reactrouter.com/en/main/components/outlet)
+If you go to [src/router.tsx](https://github.com/indroneelray/react-pokemon/blob/master/src/router.tsx), you can check out a basic AppRouter setup using `react-router` and `react-router-dom`. [<Navbar />](https://github.com/indroneelray/react-pokemon/blob/master/src/commpon-components/Navbar.tsx) is an example of an HOC and a component that uses the [`<Outlet />`](https://reactrouter.com/en/main/components/outlet)
 
 ## Pages
 The Pages folder contains a folder for each route declared in Router. An easy to follow folder structure that makes finding components easier and more intuitive
@@ -23,4 +23,4 @@ The Pages folder contains a folder for each route declared in Router. An easy to
 The [`<Homepage />`](https://github.com/indroneelray/react-pokemon/blob/master/src/pages/Homepage/Homepage.tsx) component contains a very basic example of **Pagniation**.
 
 # Contribute!
-Please feel free to raise pull requests to add more examples of React concepts/Web dev implementations to make this a one stop cheat sheet for React developers
+Please feel free to raise pull requests to add more examples of React concepts/Web dev implementations to make this a one stop cheat sheet for React developers!! Happy Coding🎉🎉🎉
