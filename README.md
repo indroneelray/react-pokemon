@@ -11,7 +11,7 @@ If you go into [src/service/http.service.ts](https://github.com/indroneelray/rea
 
 ### Using the configuration for api calls
 
-If you go into [src/service/pokemon.service.ts](https://github.com/indroneelray/react-pokemon/blob/master/src/service/pokemon.service.ts), you will how this Axios instance can be extended to isolated http services
+If you go into [src/service/pokemon.service.ts](https://github.com/indroneelray/react-pokemon/blob/master/src/service/pokemon.service.ts), you will see how this Axios instance can be extended to isolated http services
 
 ## Router setup
 If you go to [src/router.tsx](https://github.com/indroneelray/react-pokemon/blob/master/src/router.tsx), you can check out a basic AppRouter setup along with `react-router` and `react-router-dom`. Navbar is an example of an HOC and component that uses the [`<Outlet />`](https://reactrouter.com/en/main/components/outlet)
