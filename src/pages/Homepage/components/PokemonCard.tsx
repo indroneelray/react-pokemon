@@ -9,6 +9,12 @@ type Props = {
 type Sprites = {
   front_default: string;
   back_default: string;
+  other: {
+    "official-artwork": {
+      front_default: string;
+      back_default: string;
+    };
+  };
 };
 
 type Pokemon = {
@@ -16,6 +22,7 @@ type Pokemon = {
   name: string;
   weight: number;
   height: number;
+  base_experience:number;
 };
 
 export default function PokemonCard({ url, name }: Props) {
@@ -32,32 +39,49 @@ export default function PokemonCard({ url, name }: Props) {
   };
 
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
-      <img
+    <div className="max-w-xs rounded overflow-hidden shadow-lg mx-auto">
+      {/* <img
         className="w-1/2 mx-auto"
         src={pokemon?.sprites?.front_default}
-        alt="Sunset in the mountains"
+        alt={pokemon?.name}
+      /> */}
+
+      <img
+        className="w-1/2 mx-auto"
+        src={pokemon?.sprites?.other?.['official-artwork']?.front_default}
+        alt={pokemon?.name}
       />
 
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2 text-center">
           {pokemon?.name && capitalize(pokemon.name)}
         </div>
-        <p className="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-          quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-          nihil.
-        </p>
+        <div className="info-container">
+          <ul className='w-fit mx-auto'>
+            <li>
+              <strong>Weigth:&nbsp;</strong>
+              {pokemon?.weight} hg
+            </li>
+            <li>
+              <strong>Height:&nbsp;</strong>
+              {pokemon?.height} dm
+            </li>
+            <li>
+              <strong>Base XP:&nbsp;</strong>
+              {pokemon?.base_experience}
+            </li>
+          </ul>
+        </div>
       </div>
       <div className="px-6 pt-4 pb-2">
         <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          #photography
+          #tag1
         </span>
         <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          #travel
+          #tag2
         </span>
         <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          #winter
+          #tag3
         </span>
       </div>
     </div>
